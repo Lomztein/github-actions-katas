@@ -1,10 +1,10 @@
 name: hello-world
 on: push
 env:
-  docker_username: ${{ secrets.DOCKERHUB_USERNAME }}
-  docker_passsword: ${{ secrets.DOCKERHUB_PASSWORD }}
+  docker_username: ${{ secrets.DOCKER_USERNAME }}
+  docker_passsword: ${{ secrets.DOCKER_PASSWORD }}
   GIT_COMMIT: ${{ github.sha }}
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
