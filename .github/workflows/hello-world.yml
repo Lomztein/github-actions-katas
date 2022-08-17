@@ -9,8 +9,8 @@ jobs:
      - run: ci/build-app.sh
 
      - uses: actions/upload-artifact@v2
-        name: build
-        path: app.jar
+       name: build
+       path: app.jar
 
   test:
     runs-on: ubuntu-latest
