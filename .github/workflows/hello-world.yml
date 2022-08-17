@@ -12,7 +12,7 @@ jobs:
     steps:
      - uses: actions/checkout@v2
 
-     - run: ci/build-app.sh
+     - run: chmod +x ci/build-app.sh && ci/build-app.sh
 
      - uses: actions/upload-artifact@v2
        with:
@@ -29,7 +29,7 @@ jobs:
          name: build
          path: .
 
-     - run: ci/unit-test-app.sh
+     - run: chmod +x ci/unit-test-app.sh && ci/unit-test-app.sh
 
   push:
     runs-on: ubuntu-latest
