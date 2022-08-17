@@ -9,14 +9,16 @@ jobs:
      - run: ci/build-app.sh
 
      - uses: actions/upload-artifact@v2
-       name: build
-       path: app.jar
+       with:
+         name: build
+         path: app.jar
 
   test:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/download-artifact@v2
-       name: build
-       path: app.jar
+       with:
+         name: build
+         path: app.jar
 
      - run: ci/unit-test-app.sh
