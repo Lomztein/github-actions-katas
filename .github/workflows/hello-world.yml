@@ -3,6 +3,7 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: gradle:6-jdk11
     steps:
      - uses: actions/checkout@v2
 
@@ -15,6 +16,8 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    container: gradle:6-jdk11
+    needs: [build]
     steps:
      - uses: actions/download-artifact@v2
        with:
