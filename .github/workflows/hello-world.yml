@@ -4,11 +4,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+     - uses: actions/checkout@v2
 
-      - run: ci/build-app.sh
+     - run: ci/build-app.sh
 
-      - uses: actions/upload-artifact@v2
+     - uses: actions/upload-artifact@v2
         name: build
         path: app.jar
 
